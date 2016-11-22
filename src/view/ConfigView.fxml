@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="configpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="155.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.0" minWidth="10.0" prefWidth="231.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="337.0" minHeight="10.0" prefHeight="281.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="308.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="308.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="308.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="ok_button" alignment="CENTER_RIGHT" defaultButton="true" mnemonicParsing="false" onAction="#okPressed" text="OK" />
+            <Button fx:id="cancel_button" alignment="CENTER_RIGHT" cancelButton="true" mnemonicParsing="false" onAction="#cancelPressed" text="Cancel" />
+         </children>
+      </HBox>
+      <Label text="Default Port:" />
+      <TextField fx:id="config_port_field" GridPane.columnIndex="1" />
+      <ListView fx:id="aliasList" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+      <TextField fx:id="exe_path" promptText="Enter Path" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="remove_alias" mnemonicParsing="false" onAction="#removeAlias" text="Remove Selected" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <Button fx:id="browse_button" mnemonicParsing="false" onAction="#browse" text="Browse" />
+            <Button fx:id="add_alias" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#addAlias" text="Add">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TextField fx:id="name_field" promptText="Name" GridPane.rowIndex="3" />
+   </children>
+</GridPane>
